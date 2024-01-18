@@ -14,12 +14,9 @@ option = gets.chomp.to_i
 
 system 'clear'
 
-
-system 'clear'
-
 # Treat this option
-
-if option == 1
+case option
+when 1
   puts "=" * 5 + " Addtion " + "=" * 5
 
   print "\nEnter the first number: "
@@ -31,7 +28,7 @@ if option == 1
   result = firstNumber + secondNumber
   puts "\nThe sum between -> #{firstNumber} + #{secondNumber} = #{result}"
   gets
-elsif option == 2
+when 2
   puts "=" * 5 + " Subtraction " + "=" * 5
 
   print "\nEnter the first number: "
@@ -43,7 +40,7 @@ elsif option == 2
   result = firstNumber - secondNumber
   puts "\nThe subtraction between -> #{firstNumber} - #{secondNumber} = #{result}"
   gets
-elsif option == 3
+when 3
   puts "=" * 5 + " Multiplication " + "=" * 5
 
   print "\nEnter the first number: "
@@ -56,7 +53,7 @@ elsif option == 3
 
   puts "\nThe multiplication between -> #{firstNumber} x #{secondNumber} = #{result}"
   gets 
-elsif option == 4
+when 4
   puts "=" * 5 + " Division " + "=" * 5
 
   print "\nEnter the first number: "
@@ -69,7 +66,7 @@ elsif option == 4
 
   puts "\nThe division between -> #{firstNumber} / #{secondNumber} = #{result}"
   gets 
-elsif option == 0
+when 0
   puts "=" * 5 + " Thanks for use my Calculator " + "=" * 5
   gets
 else
