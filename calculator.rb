@@ -1,3 +1,6 @@
+loop do
+
+
 system "clear"
 
 # Menu
@@ -79,9 +82,11 @@ when options[:div]
 when options[:exit]
   puts "=" * 5 + " Thanks for use my Calculator " + "=" * 5
   gets
+  break
 else
   puts "The options is not found"
   gets 
 end
 
 system "clear"
+end
